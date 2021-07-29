@@ -30,6 +30,33 @@ Why this was created? For Fun! This class gives you access to sorting methods by
       { id: 2, name: 'David' }
     ]
 
+  const averageObject = [
+    {
+      speed: [
+        1,2,3,4,5
+      ]
+    },
+    {
+      speed: [
+        2,5,6,7,8
+      ]
+    },
+  ]
+  objects.sort(new SortByPath('speed').byAverage)
+  // RESULTS
+  [
+    {
+      speed: [
+        2,5,6,7,8
+      ]
+    },
+    {
+      speed: [
+        1,2,3,4,5
+      ]
+    },
+  ]
+
 ```
 
 #### `Nested`
