@@ -1,4 +1,4 @@
-class SortByPath {
+module.exports = class SortByPath {
   constructor (path) {
     this.path = path
     this.#getDataFromPath = this.#getDataFromPath.bind(this)
@@ -43,8 +43,8 @@ class SortByPath {
   byBirthDate(a, b) {
     const pathDataA = this.#getDataFromPath(a);
     const pathDataB = this.#getDataFromPath(b);
-    let d1 = newDate(pathDataA);
-    let d2 = newDate(pathDataB);
+    let d1 = new Date(pathDataA);
+    let d2 = new Date(pathDataB);
     if (d1.getUTCMonth() > d2.getUTCMonth()) {
       return 1;
     } else if (d1.getUTCMonth() > d2.getUTCMonth()) {
