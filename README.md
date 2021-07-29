@@ -42,7 +42,7 @@ Why this was created? For Fun! This class gives you access to sorting methods by
       ]
     },
   ]
-  objects.sort(new SortByPath('speed').byAverage)
+  averageObject.sort(new SortByPath('speed').byAverage)
   // RESULTS
   [
     {
