@@ -10,15 +10,14 @@ module.exports = class SortByPath {
   }
   #getDataFromPath = (object) => {
     const pathArray = this.path.split('.')
-    let obj = object;
     Array(pathArray.length).fill().forEach((_, i) => {
-      Object.entries(obj).forEach(([key, value]) => {
+      Object.entries(object).forEach(([key, value]) => {
         if (key === pathArray[i]) {
-          obj = value;
+          object = value;
         }
       })
     })
-    return obj
+    return object
   }
   byAverage (a, b) {
     const pathDataA = this.#getDataFromPath(a);
