@@ -61,12 +61,12 @@ describe('sorByPath',() => {
         id: 1,
         cats: {
           dogs: {
-            apples: 3
+            apples: 1
           }
         }
       },
     ]
-    const [{ id }] = objects.sort(new SortByPath('cats.dogs.apples').byNumber)
+    const [{ id }] = objects2.sort(new SortByPath('cats.dogs.apples').byNumber)
     expect(id).toEqual(1);
   })
 })
