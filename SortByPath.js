@@ -1,3 +1,9 @@
+/**
+ * @example <caption>Example usage of byName.</caption>
+ * [{key: 'bananas'},{key: 'apples'}].sort(new SortByPath('key').byName)
+ * returns [{key: 'apples'}, {key: 'bananas'}]
+ */
+
 module.exports = class SortByPath {
   constructor (path) {
     this.path = path
